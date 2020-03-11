@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 
 // ref: https://umijs.org/config/
 export default {
@@ -31,4 +32,15 @@ export default {
       },
     }],
   ],
+  alias: {
+    api: resolve(__dirname, './src/services/'),
+    components: resolve(__dirname, './src/components'),
+    config: resolve(__dirname, './src/utils/config'),
+    models: resolve(__dirname, './src/models'),
+    routes: resolve(__dirname, './src/routes'),
+    services: resolve(__dirname, './src/services'),
+    themes: resolve(__dirname, './src/themes'),
+    utils: resolve(__dirname, './src/utils'),
+  },
+  extraBabelPresets: ['@lingui/babel-preset-react'],
 }
